@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using LitJson;
 using System;
 using System.Collections;
 
