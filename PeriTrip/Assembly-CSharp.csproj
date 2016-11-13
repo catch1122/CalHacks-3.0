@@ -45,9 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\amadeus.cs" />
+     <Compile Include="Assets\Amadeus.cs" />
+     <Compile Include="Assets\Query.cs" />
+     <Compile Include="Assets\SimpleJSON.cs" />
      <Compile Include="Assets\box01.cs" />
-     <Compile Include="Assets\query.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

@@ -1,0 +1,13 @@
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/UnityEngine.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/UnityEditor.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Mono.Cecil.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Unity.DataContract.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Mono.Cecil.Mdb.dll
