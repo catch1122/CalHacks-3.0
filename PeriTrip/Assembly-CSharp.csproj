@@ -128,6 +128,7 @@
      <None Include="Assets\Plugins\Android\firebase-common-9.8.0\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\firebase-iid-9.8.0\AndroidManifest.xml" />
      <None Include="Assets\VRSampleScenes\Shaders\SlidingUV.shader" />
+     <None Include="Assets\Panoramic360.shader" />
      <None Include="Assets\VRSampleScenes\Shaders\SeparableAlpha.shader" />
      <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
      <None Include="Assets\VRSampleScenes\Fonts\LICENSE.txt" />
