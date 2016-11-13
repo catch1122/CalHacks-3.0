@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_2;UNITY_5_4;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_2;UNITY_5_4;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;CROSS_PLATFORM_INPUT;MOBILE_INPUT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -47,18 +47,90 @@
   <ItemGroup>
      <Compile Include="Assets\Amadeus.cs" />
      <Compile Include="Assets\BackendScript.cs" />
+     <Compile Include="Assets\GetUserInput.cs" />
+     <Compile Include="Assets\LocationSelection.cs" />
      <Compile Include="Assets\Query.cs" />
+     <Compile Include="Assets\SelectionDropDown.cs" />
+     <Compile Include="Assets\SetLocationImage.cs" />
+     <Compile Include="Assets\SetUpMenu.cs" />
      <Compile Include="Assets\SimpleJSON.cs" />
+     <Compile Include="Assets\SimulateMouseClick.cs" />
+     <Compile Include="Assets\StoreUserInfo.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleInteractiveItem.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleRenderScale.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleRotation.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleTouchpad.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\Asteroid.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\AsteroidExplosion.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\EnvironmentController.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\ExplosionPhysicsForce.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\FlyerAlignmentChecker.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\FlyerGameController.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\FlyerHealthController.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\FlyerLaser.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\FlyerLaserController.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\FlyerMovementController.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\ParticleSystemMultiplier.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\Ring.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Flyer\UIController.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Intro\IntroManager.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Maze\AICharacterControl.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Maze\AgentTrail.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Maze\CameraOrbit.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Maze\DestinationMarker.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Maze\ExitArea.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Maze\MazeGameController.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Maze\MazeTargetSetting.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Maze\Player.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Maze\SwitchButton.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Maze\ThirdPersonCharacter.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Maze\Turret.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Menu\MenuAnimator.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Menu\MenuButton.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Menu\MenuItemPopout.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Menu\MenuSelectorMover.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\ShootingGallery\ShootingGalleryController.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\ShootingGallery\ShootingGalleryGun.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\ShootingGallery\ShootingGalleryScore.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\ShootingGallery\ShootingTarget.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\ShootingGallery\UIController.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\GUIArrows.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\InputWarnings.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\ObjectPool.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\PlatformDependentText.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\Reticle.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\ReturnToMainMenu.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\SelectionRadial.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\SelectionSlider.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\UIFader.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\UIMovement.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\UITint.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\VRCameraFade.cs" />
+     <Compile Include="Assets\VRSampleScenes\Scripts\Utils\VRCameraUI.cs" />
+     <Compile Include="Assets\VRStandardAssets\Scripts\VRDeviceManager.cs" />
+     <Compile Include="Assets\VRStandardAssets\Scripts\VREyeRaycaster.cs" />
+     <Compile Include="Assets\VRStandardAssets\Scripts\VRFPSCounter.cs" />
+     <Compile Include="Assets\VRStandardAssets\Scripts\VRInput.cs" />
+     <Compile Include="Assets\VRStandardAssets\Scripts\VRInteractiveItem.cs" />
+     <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
      <Compile Include="Assets\box01.cs" />
      <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
+     <None Include="Assets\VRSampleScenes\Shaders\UnlitTransparentParam.shader" />
      <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
+     <None Include="Assets\VRSampleScenes\Shaders\Panoramic360.shader" />
      <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\Firebase\res\values\google-services.xml" />
+     <None Include="Assets\VRSampleScenes\Shaders\UIOverlay.shader" />
      <None Include="Assets\Plugins\Android\firebase-common-9.8.0\proguard.txt" />
+     <None Include="Assets\VRSampleScenes\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Plugins\Android\firebase-iid-9.8.0\proguard.txt" />
      <None Include="Assets\Plugins\Android\firebase-common-9.8.0\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\firebase-iid-9.8.0\AndroidManifest.xml" />
+     <None Include="Assets\VRSampleScenes\Shaders\SlidingUV.shader" />
+     <None Include="Assets\VRSampleScenes\Shaders\SeparableAlpha.shader" />
      <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
+     <None Include="Assets\VRSampleScenes\Fonts\LICENSE.txt" />
      <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
@@ -69,23 +141,23 @@
  <Reference Include="Firebase.Analytics">
  <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Compat">
- <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
- </Reference>
  <Reference Include="Firebase.App">
  <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Tasks">
- <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Database.Unity">
- <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.Database.Unity.dll</HintPath>
+ <Reference Include="Firebase.Auth">
+ <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Database">
  <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
  </Reference>
- <Reference Include="Firebase.Auth">
- <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+ <Reference Include="Firebase.Database.Unity">
+ <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.Database.Unity.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Compat">
+ <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Tasks">
+ <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

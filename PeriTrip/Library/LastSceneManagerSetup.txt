@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Test03_Scripts.unity
+- path: Assets/VRSampleScenes/Scenes/Location Menu.unity
   isLoaded: 1
   isActive: 1

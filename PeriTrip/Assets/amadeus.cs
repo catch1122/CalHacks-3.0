@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using SimpleJSON;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class Amadeus : MonoBehaviour {
 
 	public string url;
-
+	Text console;
 	public string apikey = "5ydifrkNfmgRtCgp7lGDA4GYuOtsUlHG";
 	public string origin;
 	public string one_way = "false";
@@ -19,22 +20,22 @@ public class Amadeus : MonoBehaviour {
 	private BackendScript bs;
 
 	public List<string> airports;
-//	public List<string> cities;
+	public List<string> cities;
 
 	// Use this for initialization
-	IEnumerator Start () {
-		GetComponent<Renderer> ().material.color = new Color(0.5f, 1, 1, 0.1f); //C#
-
+	void Start () {
+//		GetComponent<Renderer> ().material.color = new Color(0.5f, 1, 1, 0.1f); //C#
+		console = GameObject.Find("Console").GetComponent<Text>();
 		airports = new List<string> ();
-//		cities = new List<string> ();
+		cities = new List<string> ();
 
 		q = GameObject.Find("Query").GetComponent<Query>();
 		bs = GameObject.Find ("BackendScript").GetComponent<BackendScript> ();
 
-//		Debug.Log ("Hello");
-
+		Debug.Log ("Hello");
+		//console.text += "Hello";
 		// will be commenting this out later and calling it after set max price probs
-		return CallQuery();
+//		return CallQuery();
 	}
 
 	// Update is called once per frame
@@ -42,37 +43,43 @@ public class Amadeus : MonoBehaviour {
 		
 	}
 
-	void SetOrigin(string o) {
+//	public IEnumerator CallQuery() {
+//		return InternalCallQuery ();
+//	}
+
+	public void SetOrigin(string o) {
 		origin = o;
 	}
 
-	void SetDuration(string d) {
+	public void SetDuration(string d) {
 		duration = d;
 	}
 
-	void SetMaxPrice(string mp) {
+	public void SetMaxPrice(string mp) {
 		max_price = mp;
 	}
 
-	IEnumerator CallQuery() {
+	public void CallQuery() {
 //		string monthVar = System.DateTime.Now.Month.ToString ();
 //		string dateVar = System.DateTime.Now.Date.ToString ();
 //		if (monthVar < 10)
 //			monthVar = "0" + monthVar;
 //		if (dateVar < 10)
 //			dateVar = "0" + dateVar;
-
-//		Debug.Log ("Pre using");
+		//console.text += "\n PRe using";
+		Debug.Log ("Pre using");
 
 		using (var wc = new System.Net.WebClient ()) {
-//			Debug.Log ("Post using");
+			Debug.Log ("Origin: " + origin);
+			Debug.Log ("Duration: " + duration);
+			Debug.Log ("Max Price: " + max_price);
 
 			url = "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?" 
-				+ "apikey=" + apikey
+				+ "apikey=5ydifrkNfmgRtCgp7lGDA4GYuOtsUlHG"
 				+ "&origin=" + origin 
-				+ "&one-way=" + one_way 
+				+ "&one-way=false"
 				+ "&duration=" + duration 
-				+ "&direct=" + direct
+				+ "&direct=true"
 				+ "&max_price=" + max_price;
 
 //			url = "http://api.sandbox.amadeus.com/v1.2/flights/" +
@@ -84,31 +91,56 @@ public class Amadeus : MonoBehaviour {
 //			Debug.Log (jsonString);
 
 			q.CreateFromJson (jsonString);
-
 			int len;
 			if (q.results.Count < 4)
 				len = q.results.Count;
 			else
 				len = 4;
+//			console.text += "\nlength: " + len;
+
+
 		
 			for (int i = 0; i < len; i++) {
-				string cityurl = "https://api.sandbox.amadeus.com/v1.2/location/" 
-					+ q.results [i].destination
-					+ "?apikey="
-					+ apikey;
+				using (var wcTwo = new System.Net.WebClient ()) {
+					
+					string cityurl = "https://api.sandbox.amadeus.com/v1.2/location/"
+					                + q.results [i].destination
+					                + "?apikey=5ydifrkNfmgRtCgp7lGDA4GYuOtsUlHG";
+//				console.text += "\n" + cityurl;
+					var tempJsonString = wcTwo.DownloadString (cityurl);
 
-				var tempJsonString = wc.DownloadString (cityurl);
-				var N = SimpleJSON.JSON.Parse (tempJsonString);
+//					console.text += "\njson: " + tempJsonString;
+					
+//				console.text += "\nha: " + q.results [i].destination;
+//					console.text += "\napikey: " + apikey;
+					var N = SimpleJSON.JSON.Parse (tempJsonString);
 
-				string city = N ["city"] ["name"];
+//					console.text += "\nTEMPJSON: " + N;
 
-				airports.Add (q.results [i].destination);
-				bs.reference.Child("peritrip").Child(q.results[i].destination).Child("city").SetValueAsync(city);
-//				cities.Add (city);
+//					string city = bs.GetCity (q.results [i].destination);
+
+					string city = N ["city"] ["name"];
+//					console.text += "\n" + city;
+
+					airports.Add (q.results [i].destination);
+//					console.text += "\n firebase: " + q.results [i].destination;
+					if (bs.reference.Child (q.results [i].destination) == null) {
+						bs.reference.Child (q.results [i].destination).Child ("city").SetValueAsync (city);
+						bs.reference.Child (q.results [i].destination).Child ("vrUrl").SetValueAsync ("");
+					}
+
+					cities.Add (city);
+
+					Debug.Log (city);
+//					console.text += "\ncity: " + city; 
+				}
 			}
 
-			WWW www = new WWW (url);
-			yield return www;
+//			WWW www = new WWW (url);
+//			yield return www;
+			GameObject.Find("UserInfo").GetComponent<StoreUserInfo>().setAirportList(airports);
+			GameObject.Find("UserInfo").GetComponent<StoreUserInfo>().setCityList(cities);
+			SceneManager.LoadScene ("Location Menu", LoadSceneMode.Single);
 
 		} 
 	}

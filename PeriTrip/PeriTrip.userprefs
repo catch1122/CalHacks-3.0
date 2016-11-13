@@ -1,11 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Amadeus.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VRSampleScenes/Scripts/Menu/MenuButton.cs">
     <Files>
-      <File FileName="Assets/Amadeus.cs" Line="22" Column="30" />
-      <File FileName="Assets/Query.cs" Line="1" Column="1" />
-      <File FileName="Assets/box01.cs" Line="1" Column="1" />
-      <File FileName="Assets/BackendScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/BackendScript.cs" Line="106" Column="1" />
+      <File FileName="Assets/Amadeus.cs" Line="114" Column="27" />
+      <File FileName="Assets/Query.cs" Line="66" Column="3" />
+      <File FileName="Assets/SelectionDropDown.cs" Line="1" Column="1" />
+      <File FileName="Assets/GetUserInput.cs" Line="30" Column="15" />
+      <File FileName="Assets/SetUpMenu.cs" Line="38" Column="1" />
+      <File FileName="Assets/SetLocationImage.cs" Line="5" Column="24" />
+      <File FileName="Assets/LocationSelection.cs" Line="20" Column="28" />
+      <File FileName="Assets/StoreUserInfo.cs" Line="20" Column="3" />
+      <File FileName="Assets/SimulateMouseClick.cs" Line="23" Column="28" />
+      <File FileName="Assets/SimpleJSON.cs" Line="299" Column="1" />
+      <File FileName="Assets/VRSampleScenes/Scripts/Menu/MenuButton.cs" Line="86" Column="113" />
+      <File FileName="Assets/VRSampleScenes/Scripts/Utils/ReturnToMainMenu.cs" Line="10" Column="79" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

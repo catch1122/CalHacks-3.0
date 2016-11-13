@@ -49,7 +49,7 @@ public class Query : MonoBehaviour {
 
 		JSONArray items = (JSONArray)N ["results"];
 
-//		Debug.Log (items.Count);
+		Debug.Log ("Inside Query: " + items.Count);
 
 		for (int i = 0; i < items.Count; i++)
 		{
