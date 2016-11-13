@@ -16,16 +16,20 @@ public class Amadeus : MonoBehaviour {
 
 //	public Query q;	// CHANGE LIKE IT SHOULD BE SET UP HERE
 	private Query q;
+	private BackendScript bs;
 
-	public List<string> destinations;
+	public List<string> airports;
+//	public List<string> cities;
 
 	// Use this for initialization
 	IEnumerator Start () {
 		GetComponent<Renderer> ().material.color = new Color(0.5f, 1, 1, 0.1f); //C#
 
-		destinations = new List<string> ();
+		airports = new List<string> ();
+//		cities = new List<string> ();
 
-		q = GameObject.Find("Sphere").GetComponent<Query>();
+		q = GameObject.Find("Query").GetComponent<Query>();
+		bs = GameObject.Find ("BackendScript").GetComponent<BackendScript> ();
 
 //		Debug.Log ("Hello");
 
@@ -97,7 +101,10 @@ public class Amadeus : MonoBehaviour {
 				var N = SimpleJSON.JSON.Parse (tempJsonString);
 
 				string city = N ["city"] ["name"];
-				destinations.Add (city);
+
+				airports.Add (q.results [i].destination);
+				bs.reference.Child("peritrip").Child(q.results[i].destination).Child("city").SetValueAsync(city);
+//				cities.Add (city);
 			}
 
 			WWW www = new WWW (url);

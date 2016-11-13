@@ -46,14 +46,46 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Amadeus.cs" />
+     <Compile Include="Assets\BackendScript.cs" />
      <Compile Include="Assets\Query.cs" />
      <Compile Include="Assets\SimpleJSON.cs" />
      <Compile Include="Assets\box01.cs" />
+     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
+     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
+     <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\Firebase\res\values\google-services.xml" />
+     <None Include="Assets\Plugins\Android\firebase-common-9.8.0\proguard.txt" />
+     <None Include="Assets\Plugins\Android\firebase-iid-9.8.0\proguard.txt" />
+     <None Include="Assets\Plugins\Android\firebase-common-9.8.0\AndroidManifest.xml" />
+     <None Include="Assets\Plugins\Android\firebase-iid-9.8.0\AndroidManifest.xml" />
+     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
+     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Analytics">
+ <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Compat">
+ <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Unity.Compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.App">
+ <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Tasks">
+ <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Unity.Tasks.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Database.Unity">
+ <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.Database.Unity.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Database">
+ <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Auth">
+ <HintPath>/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

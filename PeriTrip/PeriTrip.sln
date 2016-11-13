@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{F0441A40-43C8-3308-F6AC-10CA4A3E3843}") = "PeriTrip", "Assembly-CSharp.csproj", "{9275AAAE-5EC9-D187-B854-A1FBB81466C0}"
 EndProject
+Project("{F0441A40-43C8-3308-F6AC-10CA4A3E3843}") = "PeriTrip", "Assembly-CSharp-Editor.csproj", "{5D3E8717-6A0C-DBB9-9098-1F34433551AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{9275AAAE-5EC9-D187-B854-A1FBB81466C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9275AAAE-5EC9-D187-B854-A1FBB81466C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9275AAAE-5EC9-D187-B854-A1FBB81466C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D3E8717-6A0C-DBB9-9098-1F34433551AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D3E8717-6A0C-DBB9-9098-1F34433551AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D3E8717-6A0C-DBB9-9098-1F34433551AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D3E8717-6A0C-DBB9-9098-1F34433551AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
