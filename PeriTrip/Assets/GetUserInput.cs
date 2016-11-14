@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 public class GetUserInput : MonoBehaviour {
 	//3 dropdown menus
@@ -29,12 +29,25 @@ public class GetUserInput : MonoBehaviour {
 		location = locationDD.GetComponentInChildren<Text>().text;
 		maxCost = maxCostDD.GetComponentInChildren<Text>().text;
 		days = daysDD.GetComponentInChildren<Text>().text;
-	//	SceneManager.LoadScene ("Location Menu", LoadSceneMode.Single);
+
 		Debug.Log ("button");
 		ama.SetOrigin (location);
 		ama.SetMaxPrice (maxCost.Substring(1));
 		ama.SetDuration (days);
-
+		//List<string> temp = new List<string> ();
+		//temp.Add ("Portland");
+		//temp.Add ("Portland");
+		//temp.Add ("Portland");
+		//temp.Add ("Portland");
+		//GameObject.Find("UserInfo").GetComponent<StoreUserInfo>().setAirportList(temp);
+		//List<string> temp2 = new List<string> ();
+		//temp2.Add ("PDX");
+		//temp2.Add ("PDX");
+		//temp2.Add ("PDX");
+		//temp2.Add ("PDX");
+		//GameObject.Find("UserInfo").GetComponent<StoreUserInfo>().setCityList(temp2);
+		//SceneManager.LoadScene ("Location Menu", LoadSceneMode.Single);
+		//return;
 		ama.CallQuery ();
 //		StartCoroutine(ama.CallQuery ());
 	}

@@ -8,7 +8,7 @@ public class Amadeus : MonoBehaviour {
 
 	public string url;
 	Text console;
-	public string apikey = "5ydifrkNfmgRtCgp7lGDA4GYuOtsUlHG";
+	public string apikey = "";
 	public string origin;
 	public string one_way = "false";
 	public string duration;
@@ -60,6 +60,9 @@ public class Amadeus : MonoBehaviour {
 	}
 
 	public void CallQuery() {
+		
+		console.text += "\n after gameobject find";
+		//SceneManager.LoadScene ("Location Menu", LoadSceneMode.Single);
 //		string monthVar = System.DateTime.Now.Month.ToString ();
 //		string dateVar = System.DateTime.Now.Date.ToString ();
 //		if (monthVar < 10)
@@ -75,7 +78,7 @@ public class Amadeus : MonoBehaviour {
 			Debug.Log ("Max Price: " + max_price);
 
 			url = "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?" 
-				+ "apikey=5ydifrkNfmgRtCgp7lGDA4GYuOtsUlHG"
+				+ "apikey=" + apikey
 				+ "&origin=" + origin 
 				+ "&one-way=false"
 				+ "&duration=" + duration 
@@ -96,7 +99,7 @@ public class Amadeus : MonoBehaviour {
 				len = q.results.Count;
 			else
 				len = 4;
-//			console.text += "\nlength: " + len;
+			console.text += "\nlength: " + len;
 
 
 		
@@ -105,7 +108,7 @@ public class Amadeus : MonoBehaviour {
 					
 					string cityurl = "https://api.sandbox.amadeus.com/v1.2/location/"
 					                + q.results [i].destination
-					                + "?apikey=5ydifrkNfmgRtCgp7lGDA4GYuOtsUlHG";
+						+ "?apikey=" + apikey;
 //				console.text += "\n" + cityurl;
 					var tempJsonString = wcTwo.DownloadString (cityurl);
 
@@ -116,14 +119,16 @@ public class Amadeus : MonoBehaviour {
 					var N = SimpleJSON.JSON.Parse (tempJsonString);
 
 //					console.text += "\nTEMPJSON: " + N;
+//				console.text += "\nINSIDE LOOP";
 
-//					string city = bs.GetCity (q.results [i].destination);
-
+//				string city = "PORTLAND";//bs.GetCity (q.results [i].destination);
+//				console.text += "\nCITY: " + city;
+//				Debug.Log ("CITY: " + city);
 					string city = N ["city"] ["name"];
 //					console.text += "\n" + city;
 
 					airports.Add (q.results [i].destination);
-//					console.text += "\n firebase: " + q.results [i].destination;
+					console.text += "\n firebase: " + q.results [i].destination;
 					if (bs.reference.Child (q.results [i].destination) == null) {
 						bs.reference.Child (q.results [i].destination).Child ("city").SetValueAsync (city);
 						bs.reference.Child (q.results [i].destination).Child ("vrUrl").SetValueAsync ("");
@@ -132,15 +137,18 @@ public class Amadeus : MonoBehaviour {
 					cities.Add (city);
 
 					Debug.Log (city);
-//					console.text += "\ncity: " + city; 
+					console.text += "\ncity " + i + ": "+ city; 
 				}
 			}
 
 //			WWW www = new WWW (url);
 //			yield return www;
+
 			GameObject.Find("UserInfo").GetComponent<StoreUserInfo>().setAirportList(airports);
 			GameObject.Find("UserInfo").GetComponent<StoreUserInfo>().setCityList(cities);
-			SceneManager.LoadScene ("Location Menu", LoadSceneMode.Single);
+			console.text += "\n after gameobject find";
+//			SceneManager.LoadScene ("Location Menu", LoadSceneMode.Single);
+			SceneManager.LoadSceneAsync("Location Menu", LoadSceneMode.Single);
 
 		} 
 	}

@@ -42,9 +42,7 @@ public class BackendScript : MonoBehaviour {
 		return FML;
 
 
-
-
-		return reference.Child (airport).Child ("city").ToString();
+//		return reference.Child (airport).Child ("city").ToString();
 	}
 
 	public string GetPreviewImage(string airport) {

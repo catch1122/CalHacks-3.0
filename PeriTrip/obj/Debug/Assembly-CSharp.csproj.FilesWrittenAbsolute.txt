@@ -11,3 +11,10 @@
 /Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Firebase.Analytics.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Firebase.App.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Firebase.Auth.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Firebase.Database.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Firebase.Database.Unity.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Unity.Compat.dll
+/Users/kwonjoanne/Hackathons/CalHacks 3.0/PeriTrip/Temp/bin/Debug/Unity.Tasks.dll
